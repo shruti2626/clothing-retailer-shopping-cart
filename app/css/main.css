@@ -1,1 +1,976 @@
+.view-container {
+    position: relative;
+  }
+.background-image{
+    position: absolute;
+    z-index: -1;
+}
+header{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom:20px;
+    color: #125688;
+    font-size: 14px;
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    border-bottom-color: #125688;
+    text-transform:uppercase;
+    
+}
 
+/* Element level font family start*/
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+    outline: 0;
+}
+
+.btn-primary{
+    color:#000000;
+}
+.btn-primary-bg:active,.btn-primary-bg:hover,.btn-primary-bg:focus{    background-color: #053C59;}
+.btn-primary-txt-clr,.btn-primary-txt-clr:active,.btn-primary-txt-clr:hover,.btn-primary-txt-clr:focus{ color: #fff;  }
+.btn-primary-border-clr:active,.btn-primary-border-clr,.btn-primary-border-clr:hover,.btn-primary-border-clr:focus{ border-color:#077fa9; }
+
+.btn-secondary-bg,.btn-secondary-bg:active,.btn-secondary-bg:hover,.btn-secondary-bg:focus{background-color: #fff; }
+.btn-secondary-txt-clr,.btn-secondary-txt-clr:hover,.btn-secondary-txt-clr:focus{ color: #1485AC;  }
+.btn-secondary-border-clr{ outline:1px solid #1485AB; }
+
+/* button style starts */
+.btn,
+.btn:hover,
+.btn:active {
+    border-radius: 2px;
+}
+
+
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline-offset:0;
+}
+
+ .btn-default{
+   padding-left:28px; 
+   padding-right:28px;
+   margin-right: 20px;  
+  }
+
+
+.btn-danger{
+    padding-left:28px; 
+   padding-right:28px;
+   
+}
+/* button style end */
+
+
+
+
+/* pagination style end */
+/*Table style starts */
+.table>thead>tr>th {
+    font-size: 14px;
+    color:#000000;
+    border-bottom: 1px solid #616365;
+}
+.table>thead>tr>th a {
+    color:#125688;
+    }
+table.table tbody tr td{
+    height: 40px;
+    border-bottom: 1px solid #F1F1F1;
+    color:#000000;
+    font-size: 14px;
+    
+}
+table{
+    border-bottom: 1px solid #616365;
+}
+.table>thead>tr.total-price-section{
+    font-size: 18px;
+    color:#000000;
+}
+
+/*Table style end */
+
+/*Alert styles start*/
+.alert {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 2px;
+}
+.alert label {
+    color: #616365
+}
+.alert strong {
+    font-weight: bold;
+}
+.alert-success {
+    border: 1px solid #81BC29;
+    color: #81BC29;
+}
+.alert-info {
+    border: 1px solid #E98300;
+    color: #E98300;
+}
+.alert-danger {
+    border: 1px solid #DE1D50;
+    color: #DE1D50;
+}
+.alert {
+    padding: 12px 20px;
+}
+.alert .fa {
+    margin-right: 8px;
+    font-size: 18px;
+    width: 15px;
+}
+/* .panel-heading{
+    background-color: #f3dfb44a !important;
+} */
+.tdCenter{
+    text-align: center;
+    }
+/* .tdRight{
+   
+} */
+.input-append{
+    display: inline;
+}
+.background-image{
+    position: absolute;
+    z-index: -1;
+}
+
+    body {
+           font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+    /* Float four columns side by side */
+    .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+    }
+
+    
+
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            }
+    }
+
+    /* Style the counter cards */
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;  
+        padding: 10%;
+        width: 500px;
+        text-align: center;
+        background-color: #f1f1f1;
+        margin-bottom: 10%;
+    }
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    .products-table {
+        margin-top: 25px;
+      }
+      
+      .section-header {
+        font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        color: #125688;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    .product-stock-value, .product-price-value, .product-category-value {
+        text-align: center;
+      }
+      .section-table-heading {
+        font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      
+      
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    .btn-default{
+        margin-bottom:10px; 
+            }
+     .btn-danger{
+                margin-bottom:10px; 
+             }
+  }  
+
+  header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #125688;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom-color: #125688;
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+  }
+  
+  table {
+    margin: auto;
+  }
+  
+  td, th {
+    padding: 12px;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+  
+  td {
+    border-top-style: solid;
+    border-top-color: #125688;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #125688;
+    border-bottom-width: 1px;
+    color: #125688;
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  
+  .background-image {
+    position: absolute;
+    -webkit-filter: blur(7px);
+    z-index: -1;
+  }
+  
+  .category-section {
+    margin: auto;
+    max-width: 806px;
+    margin-top: 46px;
+  }
+  
+  .category-box {
+    height: 237px;
+    width: 250px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 14px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 3px;
+    opacity: 0.8;
+  }
+  
+  .category-box:hover {
+    border-color: #428bca;
+    opacity: 1;
+  }
+  
+  .category-image-div {
+    height: 130px;
+    width: 160px;
+    margin: auto;
+    margin-top: 14px;
+  }
+  
+  .category-title {
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #125688;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 44px;
+  }
+  
+  .category-image {
+    height: 100%;
+    width: 75%;
+  }
+  
+  .products-section {
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    margin: auto;
+    max-width: 730px;
+    margin-top: 61px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .back-link {
+    position: absolute;
+    margin-left: 3px;
+    margin-top: -1px;
+    font-size: 15px;
+    text-decoration: none !important;
+    color: #125688;
+  }
+  
+  .back-link:hover {
+    color: #181d42;
+  }
+  
+  .back-link-arrow {
+    margin-left: 30px;
+    color: #125688;
+  }
+  
+  .products-table {
+    margin-top: 25px;
+  }
+  
+  .section-header {
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #125688;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .section-table-heading {
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .out-of-stock-message {
+    position: absolute;
+    font-size: 12px;
+    color: red;
+    font-style: italic;
+  }
+  
+  .product-stock-value, .product-price-value, .product-category-value {
+    text-align: center;
+  }
+  
+  .add-btn {
+    background-color: #125688;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    width: 94px;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .add-btn:hover, .remove-btn:hover, .voucher-btn:hover {
+    background-color: #181d42;
+  }
+  
+  .shopping-cart-section {
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    margin: auto;
+    max-width: 827px;
+    margin-top: 61px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .shopping-cart-table {
+    display: block;
+    max-height: 245px;
+    width: 823px;
+    overflow-y: scroll;
+    padding-top: 10px;
+    margin: auto;
+    padding-left: 32px;
+  }
+  
+  .remove-button {
+    background-color: #125688;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    width: 69px;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .total-price-section {
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    max-width: 213px;
+    padding-top: 30px;
+    padding-bottom: 13px;
+    margin-left: 770px;
+    margin-top: 15px;
+  }
+  
+  .total-price-figure {
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #125688;
+    font-weight: bold;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .voucher-section {
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    max-width: 598px;
+    padding-top: 30px;
+    padding-bottom: 13px;
+    margin-left: 157px;
+    margin-top: -142px;
+    height: 142px;
+  }
+  
+  .voucher-form {
+    height: 63px;
+    margin-top: -30px;
+  }
+  
+  .voucher-label {
+    font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #125688;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 32px;
+    position: absolute;
+    margin-left: 43px;
+  }
+  
+  .voucher-textarea {
+    resize: none;
+    text-align: center;
+    border-color: #125688;
+    margin-top: 32px;
+    width: 182px;
+    margin-left: 222px;
+  }
+  
+  .voucher-button {
+    background-color: #125688;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    width: 60px;
+    padding: 5px;
+    font-size: 12px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 32px;
+  }
+  
+  .invalid-message {
+    text-align: center;
+    color: red;
+    font-size: 17px;
+    margin-top: 7px;
+    margin-left: 30px;
+  }
+  
+  .discount-message {
+    text-align: center;
+    color: green;
+    font-size: 17px;
+    margin-top: 17px;
+    margin-left: 30px;
+  }
+  
+  @media only screen and (max-width: 1199px) {
+  
+    .background-image {
+      position: absolute;
+      -webkit-filter: blur(7px);
+      z-index: -1;
+      left: -23px;
+    }
+  
+    .voucher-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 598px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: 57px;
+      margin-top: -142px;
+      height: 142px;
+    }
+  
+    .total-price-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 213px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: 671px;
+      margin-top: 15px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 991px) {
+  
+    td {
+      font-size: 13px;
+    }
+  
+    td, th {
+      padding: 12px;
+      padding-left: 26px;
+      padding-right: 9px;
+    }
+  
+    .background-image {
+      position: absolute;
+      -webkit-filter: blur(7px);
+      z-index: -1;
+      left: -118px;
+    }
+  
+   
+  
+    .voucher-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 493px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: -1px;
+      margin-top: -142px;
+      height: 142px;
+    }
+  
+    .total-price-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 213px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: 507px;
+      margin-top: 15px;
+    }
+  
+    .voucher-label {
+      font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: #125688;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 32px;
+      position: absolute;
+      margin-left: 18px;
+    }
+  
+    .voucher-textarea {
+      resize: none;
+      text-align: center;
+      border-color: #125688;
+      margin-top: 32px;
+      width: 182px;
+      margin-left: 202px;
+    }
+  
+  }
+  
+  @media only screen and (max-width:726px) {
+  
+    .section-header {
+      font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: #125688;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  
+    .total-price-figure {
+      font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: #125688;
+      font-weight: bold;
+      font-size: 21px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  
+    .voucher-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 493px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: -1px;
+      margin-top: -111px;
+      height: 111px;
+    }
+  
+    .voucher-label {
+      font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: #125688;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 32px;
+      position: absolute;
+      margin-left: 18px;
+    }
+  
+    .voucher-textarea {
+      resize: none;
+      text-align: center;
+      border-color: #125688;
+      margin-top: 29px;
+      width: 182px;
+      margin-left: 154px;
+    }
+  
+    .voucher-button {
+      background-color: #125688;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      width: 60px;
+      padding: 5px;
+      font-size: 12px;
+      position: absolute;
+      margin-left: 20px;
+      margin-top: 28px;
+    }
+  
+    .discount-message {
+      text-align: center;
+      color: green;
+      font-size: 14px;
+      margin-top: 17px;
+      margin-left: -62px;
+    }
+  
+    .invalid-message {
+      text-align: center;
+      color: red;
+      font-size: 15px;
+      margin-top: 7px;
+      margin-left: -2px;
+    }
+  
+  
+  }
+  
+  @media only screen and (max-width:700px) {
+    .row {
+      margin-left: 191px;
+      margin-right: -15px;
+    }
+  }
+  
+  @media only screen and (max-width:654px) {
+  
+    .background-image {
+      position: absolute;
+      -webkit-filter: blur(7px);
+      z-index: -1;
+      left: -246px;
+    }
+  
+    .voucher-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 436px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: -1px;
+      margin-top: -111px;
+      height: 111px;
+    }
+  
+    .total-price-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 213px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: 450px;
+      margin-top: 15px;
+    }
+  
+  }
+  
+  @media only screen and (max-width:616px) {
+    td, th {
+      padding: 12px;
+      padding-left: 26px;
+      padding-right: 8px;
+    }
+  }
+  
+  @media only screen and (max-width:599px) {
+  
+    td, th {
+      padding: 12px;
+      padding-left: 26px;
+      padding-right: 4px;
+    }
+  
+    .section-table-heading {
+      font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  
+    .voucher-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 356px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: -1px;
+      margin-top: -111px;
+      height: 111px;
+    }
+  
+    .voucher-label {
+      font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: #125688;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 8px;
+      position: absolute;
+      margin-left: 109px;
+    }
+  
+    .voucher-textarea {
+      resize: none;
+      text-align: center;
+      border-color: #125688;
+      margin-top: 33px;
+      width: 182px;
+      margin-left: 51px;
+    }
+  
+    .voucher-button {
+      background-color: #125688;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      width: 60px;
+      padding: 5px;
+      font-size: 12px;
+      position: absolute;
+      margin-left: 14px;
+      margin-top: 32px;
+    }
+  
+    .invalid-message {
+      text-align: center;
+      color: red;
+      font-size: 15px;
+      margin-top: 7px;
+      margin-left: -70px;
+    }
+  
+    .discount-message {
+      text-align: center;
+      color: green;
+      font-size: 14px;
+      margin-top: 9px;
+      margin-left: -8px;
+    }
+  
+    .total-price-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 213px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: 370px;
+      margin-top: 15px;
+    }
+    .table-responsive{
+        overflow-x: none;
+    }
+  
+  }
+  
+  @media only screen and (max-width:560px) {
+    .row {
+      margin-left: 115px;
+      margin-right: -15px;
+    }
+  }
+  
+  @media only screen and (max-width:514px) {
+  
+    .background-image {
+      position: absolute;
+      -webkit-filter: blur(7px);
+      z-index: -1;
+      left: -416px;
+    }
+  
+    .back-link-arrow {
+      margin-left: 11px;
+      color: #125688;
+      top: -2px;
+    }
+  
+    .back-link {
+      position: absolute;
+      margin-left: 3px;
+      margin-top: -1px;
+      font-size: 12px;
+      text-decoration: none !important;
+      color: #125688;
+    }
+  
+    .voucher-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 240px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: 0px;
+      margin-top: -111px;
+      height: 111px;
+    }
+  
+    .voucher-label {
+      font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: #125688;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 20px;
+      position: absolute;
+      margin-left: 27px;
+    }
+  
+    .voucher-textarea {
+      resize: none;
+      text-align: center;
+      border-color: #125688;
+      margin-top: 46px;
+      width: 125px;
+      margin-left: 27px;
+      font-size: 12px;
+    }
+  
+    .voucher-button {
+      background-color: #125688;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      width: 49px;
+      padding: 4px;
+      font-size: 11px;
+      position: absolute;
+      margin-left: 11px;
+      margin-top: 46px;
+    }
+  
+    .discount-message {
+      text-align: center;
+      color: green;
+      font-size: 11px;
+      margin-top: 12px;
+      margin-left: 20px;
+      width: 140px;
+    }
+  
+    .invalid-message {
+      text-align: center;
+      color: red;
+      font-size: 11px;
+      margin-top: 18px;
+      margin-left: -60px;
+    }
+  
+    .total-price-section {
+      background-color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 213px;
+      padding-top: 30px;
+      padding-bottom: 13px;
+      margin-left: 256px;
+      margin-top: 15px;
+    }
+  
+  }
+  
+  @media only screen and (max-width:473px) {
+    td {
+      font-size: 11px;
+    }
+  }
+  
+  @media only screen and (max-width:430px) {
+    .row {
+      margin-left: 50px;
+      margin-right: -15px;
+    }
+  }
+  
+  @media only screen and (max-width:400px) {
+  
+    td, th {
+      padding: 12px;
+      padding-left: 10px;
+    }
+  
+    .background-image {
+      position: absolute;
+      -webkit-filter: blur(7px);
+      z-index: -1;
+      left: -182px;
+    }
+  
+    .back-link-arrow {
+      margin-left: 12px;
+      color: #125688;
+    }
+  
+    .row {
+      margin-left: 39px;
+      margin-right: -15px;
+    }
+  
+    .out-of-stock-message {
+      position: absolute;
+      font-size: 10px;
+      color: red;
+      font-style: italic;
+    }
+  
+  }
+  .container.main-container{
+      opacity:0.8;
+      background-color: #FFF
+  }
+  
+  table.table> tbody > tr > td.tdRight{
+        font-weight: bold;
+        text-align: right;
+        font-size: 14px;
+        color:#125688;
+        border-bottom: 1px solid #616365;
+      }
+      .row{
+          margin-right:0px;
+          margin-left: 0px; 
+      }
