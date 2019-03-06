@@ -1,0 +1,94 @@
+<section  class="container">
+        <!-- page title STARTS-->
+          <header role="banner">
+            <h2>My Shopping Cart</h2>
+          </header>
+        <!-- page title ENDS-->
+        <!-- page description STARTS-->
+    <div class="main-container row">
+      <div class="table-responsive">
+        <img class="background-image" src="image/background-image-fashion.jpg">
+          <div class="col-md-8 col-sm-12 col-xs-12">
+              <table class="table table-bordered  ">
+                <thead>
+                    <tr>
+                    <th>CATEGORY</th>
+                    <th>PRODUCT NAME</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th> REMOVE </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- empty cart message -->
+                    <tr ng-show="count < 1">
+                        <td class="empty-cart" colspan="4">
+                            Your Cart is empty.
+                        </td>
+                    </tr>
+                    <!-- cart items -->
+                    <tr ng-repeat="item in cartItem">
+                        <td ng-bind="item.category"></td>
+                        <td ng-bind="item.productName"></td>
+                        <td ng-bind="item.price * item.quantity | currency:'£'"></td>
+                        <td class="tdCenter">{{item.quantity}}
+                             &nbsp;
+                            <div class="input-append">
+                                <button class="btn add-btn" type="button" ng-disabled="item.quantity >= 1000"
+                                    ng-click="addItem(item.productName,item.price,+1)">+</button>
+                                <button class="btn add-btn-inverse" type="button" ng-disabled="item.quantity <= 1"
+                                    ng-click="addItem(item.productName,item.price,-1)">-</button>
+                                    <span  ng-bind="outOfStockMsg" ng-show="{{item.quantityInStock}}< 1"></span>
+                            </div>
+                        </td>
+                        <td class="tdCenter" title="remove from cart">
+                            <button type="submit" name ="remove" class="remove-btn" ng-click="addItem(item.productName,item.price,-100000)">
+                                 <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- footer -->
+                    <tr class="total-price-section">
+                        <td ><b>Total Price</b></td>
+                        <td></td>
+                        <td class="tdRight"> <b ng-bind="total | currency :'£'"></b></td>
+                        <td class="tdCenter"> <b ng-bind="count"></b></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+              </table>
+        <!-- Button section -->
+            <a class="btn btn-default col-md-5 col-sm-12 col-xs-12" href='#!/getProduct'>
+                < Continue Shopping
+            </a>
+            <a class="btn btn-danger col-md-5 col-sm-12 col-xs-12" ng-click="clearItems()" ng-disabled="count < 1">
+                <span class="glyphicon glyphicon-trash"></span>  Clear Cart
+            </a>
+        </div>
+      </div>
+        <!-- Redeem voucher section -->
+
+        <div class="col-md-4 col-sm-12 col-xs-12" ng-show="count>0">
+                <div class="redeem-voucher">
+                    <h4 class="panel-heading">
+                            Redeem a Voucher ?
+                    </h4>
+                </div>
+                <div class="discount-voucher">
+                    <label for="discount-voucher">
+                    </label>
+                    <input type="text" id="discount-voucher" ng-model="voucherCode" placeholder="Enter Voucher Code">
+                    <button  type="submit" class="discount-voucher-btn" name="apply-voucher" ng-click="checkValidVoucher()">APPLY</button>
+                </div>
+                <div class="discount-voucher-msg">
+                    <p class="invalid-message" ng-hide="validVoucher">This voucher is not valid!</p>
+                    <p class="discount-message" ng-hide="voucherMessage">Disount applied! £{{discountAmount}} has been taken off your order.</p>
+                </div>
+        </div>
+    </div>
+ </div> 
+<!-- page description ENDS-->
+</section>
+      
+          
+    
