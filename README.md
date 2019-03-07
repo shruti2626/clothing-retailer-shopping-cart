@@ -103,42 +103,44 @@ To make website **accessible** I had set aria tags for screenreader.
 ***User can view all product available with category, productname, price and quantity:***
 
 
-![Product Page]
+![Product Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/oitem.PNG)
 
 ***User can view can add a product from add to cart button:***
 
-![Product Page]
+![Product Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/clickonCart.PNG)
 
 ***User cannot add a product that is out of stock:***
 
-![Product Page]
+![Product Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/outOfstock.PNG)
 
 ***User can view their shopping cart on clicking cart icon :***
 
-![Product Page]
+![Product Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/viewcart.PNG)
 
 ***User can view his cart item :***
 
-![Cart Page]
+![Cart Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/viewcart.PNG)
 
-***User can view increase or descrease product quantity :***
+***User can view increase or decrease product quantity and User can remove single product on click  x icon: :***
 
-![Cart Page]
-
-***User can remove single product on click  x icon:***
-
-
+![Cart Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/remove-icon.PNG)
 
 ***User can continue shopping :***
 
+![Cart Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/remove-icon.PNG)
 
-***User can  redeem voucher using code :***
+***User can redeem voucher using code  :***
 
+![Cart Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/vouchercode.PNG)
+![Cart Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/discuntapplied.PNG)
+
+***User can view message if he adds invalid voucher code :***
+
+![Cart Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/invalid-voucher.PNG)
 
 ***User can clear cart also :***
 
-
-***User can view message if he adds invalid voucher code :***
+![Cart Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/emptyCart.PNG)
 
 
 
