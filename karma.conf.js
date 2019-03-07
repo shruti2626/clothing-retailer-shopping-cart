@@ -23,25 +23,13 @@ module.exports = function(config) {
         files: [
             "node_modules/angular/angular.js",
             "node_modules/angular-mocks/angular-mocks.js",
-            "node_modules/angular-ui-router/src/*.js",
             "node_modules/angular-bootstrap/*.js",
-            "node_modules/angular-ui-bootstrap/dist/*.js",
-            "node_modules/angular-block-ui/dist/*.js",
-            "node_modules/angular-translate/dist/*.js",
-            "node_modules/angular-translate/dist/**/*.js",
-            "node_modules/jquery/dist/jquery.js",
-            "node_modules/underscore/*.js",
-            "node_modules/iso-currency/dist/*.js",
-            "node_modules/oclazyload/dist/ocLazyLoad.min.js",
-            "node_modules/fraud-analyzer/fraud-analyzer.js",
-            "ext-libs/fraudnet/boiukprefs.js",
-            "fonts/webfont.js",
             "views/*.html",
             "js/**/*.js",
             "js/app.js",
-            "test/appSpec.js",
-            "test/ShoppingCtrlSpec.js",
-                    ],
+            "tests/**/*.js",
+            "test/*.js"
+              ],
 
 
         // list of files to exclude
