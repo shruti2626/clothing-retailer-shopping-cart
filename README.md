@@ -116,7 +116,7 @@ As for unit testing I used Karma-Jasmine. Unfortunately I didn't have time to te
 
 ***User can view their shopping cart on clicking cart icon :***
 
-![Product Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/viewcart.PNG)
+![Product Page](https://github.com/shruti2626/clothing-reatil-images/blob/master/viewProductlist.PNG)
 
 ***User can view his cart item :***
 
