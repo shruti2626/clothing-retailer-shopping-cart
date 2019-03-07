@@ -1,105 +1,105 @@
 <section  class="container">
         <!-- page title STARTS-->
-  <header class="header-container">
-                <div class="header-limiter">
-                  <h3>MY CART</h3>
-                </div>
- </header>
-<!-- page title ENDS-->
+    <header class="header-container">
+        <div class="header-limiter">
+            <h3>MY CART</h3>
+        </div>
+    </header>
+    <!-- page title ENDS-->
     <!-- page description STARTS-->
-  <div class="main-container">
-    <div class="row">
-        <img class="background-image" src="image/background-image-fashion.jpg">
-      <div class="table-responsive col-md-8 col-sm-12 col-xs-12">
-                  <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                        <th>CATEGORY</th>
-                        <th>PRODUCT NAME</th>
-                        <th>PRICE</th>
-                        <th>QUANTITY</th>
-                        <th> REMOVE </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- empty cart message -->
-                        <tr ng-show="count < 1">
-                            <td class="empty-cart" colspan="4">
-                                <span>YOUR CART IS EMPTY !</span>
-                            </td>
-                        </tr>
-                        <!-- cart items -->
-                        <tr ng-repeat="item in cartItem" >
-                            <td data-label="CATEGORY" ng-bind="item.category"></td>
-                            <td data-label="PRODUCT NAME" ng-bind="item.productName"></td>
-                            <td data-label="PRICE" ng-bind="item.price * item.quantity | currency:'£'"></td>
-                            <td data-label="QUANTITY" class="tdCenter">{{item.quantity}}
-                                 &nbsp;
-                                <div class="input-append">
-                                    <button class="btn btn-success" type="button" ng-disabled="item.quantity >= 1000"
-                                        ng-click="addItem(item.productName,item.price,+1)">+</button>
-                                    <button class="btn btn-inverse" type="button" ng-disabled="item.quantity <= 1"
-                                        ng-click="addItem(item.productName,item.price,-1)">-</button>
-                                </div>
-                            </td>
-                            <td class="tdCenter" title="remove from cart">
-                                 <span class="glyphicon glyphicon-remove" ng-click="addItem(item.productName,item.price,-100000)"></span>
-                                
-                            </td>
-                        </tr>
-                        <!-- footer -->
-                        <!-- <tr class="total-price-section">
-                            <td ><b>Total Price</b></td>
-                            <td></td>
-                            <td class="tdRight" ng-hide="validVoucher"> <b ng-bind="total | currency :'£'"></b></td>
-                            <td class="tdRight" ng-show="validVoucher"> <b ng-bind="displayFinalAmount | currency :'£'"></b></td>
-                            <td class="tdCenter"> <b ng-bind="count"></b></td>
-                            <td></td>
-                        </tr> -->
-                    </tbody>
-                  </table>
-                  <!-- Button section -->              
-                    <div class="col-md-12 col-sm-12 col-xs-12 btn-section">
-                        <a class="col-md-5 btn btn-success" href='#!/getProduct'>Continue Shopping</a>
-                        <span class="col-md-2"></span>
-                        <a class="col-md-5 btn btn-danger" href='#' ng-click="clearItems()" ng-disabled="count < 1">
-                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            Clear Cart
-                        </a>
-                    </div>
-                
-      </div>
-                <!-- Redeem voucher section -->
-    
-       <div class="col-md-4 col-sm-12 col-xs-12" ng-show="count>0">
-          <div class="row">
-             <div class="card">
-                    <h4> REDEEM VOUCHER HERE </h4>   
-                <div class="form-inline">
-                    <input id="voucher" class="form-control" type="text" name="promo" ng-model="voucherCode" placeholder="Enter Voucher Code" />                                
-                    <button for="voucher" type="submit" class="btn btn-primary" name="apply-voucher" ng-click="checkValidVoucher()">APPLY</button>
-                 </div>  
-                     <ul>
-                        <li> VOUCHER05  £5.00 off your order</li>
-                        <li>VOUCHER10  £10.00 off when you spend over £50.00</li>
-                        <li>VOUCHER15  £15.00 off when you have bought at least one footwear item and spent
-                                over £75.00</li>
-                        </ul>
-                    <div class="discount-voucher-msg">
-                        <p class="invalid-message" ng-show="validVoucher">This voucher is not valid!</p>
-                        <p class="discount-message" ng-show="voucherMessage">Disount applied! £{{discountAmount}} has been taken off your order.</p>
-                        <!-- <h3  ng-show="voucherMessage"> Discount - {{displayFinalAmount | currency :'£' | limitTo : 2}}</h> -->
-                    </div>
-                   <div class="total-price-section">
-                         <h4 ><b>Total Price</h4>
+    <div class="main-container">
+            <div class="row">
+                <img class="background-image" src="image/background-image-fashion.jpg">
+                <div class="table-responsive col-md-8 col-sm-12 col-xs-12">
+                    <table class="table table-striped table-dark w-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">CATEGORY</th>
+                                <th scope="col">PRODUCT NAME</th>
+                                <th scope="col">PRICE</th>
+                                <th scope="col">QUANTITY</th>
+                                <th scope="col"> REMOVE </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- empty cart message -->
+                            <tr ng-show="count < 1">
+                                <td class="empty-cart" colspan="4">
+                                    <span>YOUR CART IS EMPTY !</span>
+                                </td>
+                            </tr>
+                            <!-- cart items -->
+                            <tr ng-repeat="item in cartItem" >
+                                <th scope="row" data-label="CATEGORY" ng-bind="item.category"></th>
+                                <td data-label="PRODUCT NAME" ng-bind="item.productName"></td>
+                                <td data-label="PRICE" ng-bind="item.price * item.quantity | currency:'£'"></td>
+                                <td data-label="QUANTITY" class="tdCenter">{{item.quantity}}
+                                        &nbsp;
+                                    <div class="input-append">
+                                        <button class="btn btn-success" type="button" ng-disabled="item.quantity >= 1000"
+                                            ng-click="addItem(item.productName,item.price,+1)">+</button>
+                                        <button class="btn btn-inverse" type="button" ng-disabled="item.quantity <= 1"
+                                            ng-click="addItem(item.productName,item.price,-1)">-</button>
+                                    </div>
+                                </td>
+                                <td class="tdCenter" title="remove from cart">
+                                        <span class="glyphicon glyphicon-remove" ng-click="addItem(item.productName,item.price,-100000)"></span>                                
+                                </td>
+                            </tr>
+                            <!-- footer -->
+                            <tr class="total-price-section">
+                                <td ><b>Total Price</b></td>
+                                <td></td>
+                                <td class="tdRight" ng-hide="validVoucher"> <b ng-bind="total | currency :'£'"></b></td>
+                                <td class="tdRight" ng-show="validVoucher"> <b ng-bind="displayFinalAmount | currency :'£'"></b></td>
+                                <td class="tdCenter"> <b ng-bind="count"></b></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <!-- Button section -->              
+                            <div class="col-md-12 col-sm-12 col-xs-12 btn-section">
+                                <a class="col-md-5 btn btn-success" href='#!/getProduct'>Continue Shopping</a>
+                                <span class="col-md-2"></span>
+                                <a class="col-md-5 btn btn-danger" href='#' ng-click="clearItems()" ng-disabled="count < 1">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                    Clear Cart
+                                </a>
+                            </div>
+                        
+            </div>
+                        <!-- Redeem voucher section -->
+            
+            <div class="col-md-4 col-sm-12 col-xs-12" ng-show="count>0">
+                <div class="row">
+                    <div class="card">
+                            <h4> <b>REDEEM VOUCHER HERE</b> </h4>   
+                        <div class="form-inline">
+                            <input id="voucher" class="form-control" type="text" name="promo" ng-model="voucherCode" placeholder="Enter Voucher Code" />                                
+                            <button for="voucher" type="submit" class="btn btn-primary" name="apply-voucher" ng-click="checkValidVoucher()">APPLY</button>
+                        </div>  
+                            <ul>
+                                <li>VOUCHER05: £5.00 off your order</li>
+                                <li>VOUCHER10: £10.00 off when you spend over £50.00</li>
+                                <li>VOUCHER15: £15.00 off when you have bought at least one footwear item and spent over £75.00</li>
+                                </ul>
+                            <div class="discount-voucher-msg">
+                                <p class="invalid-message" ng-show="validVoucher">This voucher is not valid!</p>
+                                <p class="discount-message" ng-show="voucherMessage">Disount applied! £{{discountAmount}} has been taken off your order.</p>
+                                <!-- <h3  ng-show="voucherMessage"> Discount - {{displayFinalAmount | currency :'£' | limitTo : 2}}</h> -->
+                            </div>
+                        <div class="total-price-section">
+                                <h4>
+                                    <b>Total price                                        
+                                </h4>
                                 <p class="total-price-figure" ng-show="voucherMessage" ng-bind="displayFinalAmount | currency :'£'"> </p>
                                 <p class="total-price-figure"  ng-hide="voucherMessage" ng-bind="total | currency :'£'"> </p>
-                     </div>
-             </div>
-         </div>
-     </div>
-   </div>     
- </div> 
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div> 
     <!-- page description ENDS-->
  </section>
           
