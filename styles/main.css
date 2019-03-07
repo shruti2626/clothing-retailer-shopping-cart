@@ -25,12 +25,14 @@ body {
   margin: 0 auto;
   font-family: 'proxima-nova',
 }
+
 /* main-container css start */
 .main-container{
   margin-top:20px;
   box-shadow: 0 0 5px 5px #80808073;
   padding:0 15px;
      }
+
 .background-image{
   position: absolute;
   z-index: -1;
@@ -96,10 +98,15 @@ table.table tbody tr td span.out-of-stock{
  display: block;
 
 }
+/* remove icon */
+table.table tbody tr td span.remove-icon{
+  cursor:pointer;
+ 
+ }
 /* shopping cart  */
 .shopping-cart-here{
-  font-weight: 700;
-  }
+font-weight: 700;
+}
  /* empty cart message */
  table.table tbody tr td.empty-cart{
   font-size: 24px;

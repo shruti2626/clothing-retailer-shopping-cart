@@ -43,7 +43,7 @@
                                     </div>
                                 </td>
                                 <td class="tdCenter" title="remove from cart">
-                                        <span class="glyphicon glyphicon-remove" ng-click="addItem(item.productName,item.price,-100000)"></span>                                
+                                        <span class="glyphicon glyphicon-remove remove-icon" ng-click="addItem(item.productName,item.price,-100000)"></span>                                
                                 </td>
                             </tr>
                             <!-- footer -->
@@ -61,7 +61,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 btn-section">
                                 <a class="col-md-5 btn btn-success" href='#!/getProduct'>Continue Shopping</a>
                                 <span class="col-md-2"></span>
-                                <a class="col-md-5 btn btn-danger" href='#' ng-click="clearItems()" ng-disabled="count < 1">
+                                <a class="col-md-5 btn btn-danger"  ng-click="clearItems()" ng-disabled="count < 1">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                     Clear Cart
                                 </a>
