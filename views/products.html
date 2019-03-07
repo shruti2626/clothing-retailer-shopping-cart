@@ -12,14 +12,14 @@
     <div  class="main-container">
       <img class="background-image" src="image/background-image-fashion.jpg">
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-striped table-dark w-auto">
           <thead>
             <tr>
-                <th>CATEGORY</th>
-                <th>PRODUCT NAME</th>
-                <th>PRICE</th>
-                <th class="qty">QUANTITY</th>
-                <th>
+              <th scope="col">CATEGORY</th>
+              <th scope="col">PRODUCT NAME</th>
+              <th scope="col">PRICE</th>
+              <th scope="col" class="qty">QUANTITY</th>
+              <th>
                 <a href="#!/cart" title="go to shopping cart">
                   <span class="glyphicon glyphicon-shopping-cart"></span>
                   <b ng-bind="count"></b> items,
@@ -30,7 +30,7 @@
           </thead>
           <tbody>
             <tr class="animate-repeat" ng-repeat="item in products | filter:searchText | orderBy:'category' ">
-              <td ng-bind="item.category "></td>
+              <th scope="row" ng-bind="item.category "></th>
               <td ng-bind="item.productName"></td>
               <td ng-bind="item.price | currency:'£'"></td>
               <td ng-bind="item.quantityInStock"></td>
@@ -39,14 +39,18 @@
                 <span class="out-of-stock" ng-bind="outOfStockMsg" ng-show="{{item.quantityInStock}}< 1"></span> </td>
             </tr>
             <tr>
-                <td class="tdRight" colspan="5">
-                  <a href="#!/cart" title="go to shopping cart">
-                    <span class="glyphicon glyphicon-shopping-cart"></span>
-                    <b ng-bind="count"></b> items,
-                    <b ng-bind="total | currency :'£'"></b>
-                  </a>
-                </td>
-              </tr>
+              <td/>
+              <td/>
+              <td/>
+              <td/>
+              <td class="tdRight" colspan="5">
+                <a href="#!/cart" title="go to shopping cart">
+                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                  <b ng-bind="count"></b> items,
+                  <b ng-bind="total | currency :'£'"></b>
+                </a>
+              </td>
+            </tr>
           </tbody>
         </table>
        </div>
