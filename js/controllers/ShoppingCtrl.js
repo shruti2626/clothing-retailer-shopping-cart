@@ -8,7 +8,7 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
         $scope.amountAfterDiscount = null;
         $scope.validVoucher = false;
         this.cartName = "Angular Store";
-        $scope.getProduct=function() {
+        $scope.getProductList=function() {
             ProductDetailsService.getProducts().
                 then(function (resp) {
                     if (resp.status == 200) {
@@ -204,5 +204,5 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
         $scope.voucherCode = "";
        
      };
-     $scope.getProduct();
+     $scope.getProductList();
     }]);
