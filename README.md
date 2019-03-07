@@ -151,7 +151,7 @@ Follow the below instructions on your terminal to use the website:
 
 ```
 $ git clone https://github.com/shruti2626/clothing-retailer-shopping-cart.git
-$ cd clothing-retailer-portal
+$ cd clothing-retailer-shopping-cart
 $ npm install
 $ npm start
 (On your browser visit: http://localhost:8000/#!/getProduct)
