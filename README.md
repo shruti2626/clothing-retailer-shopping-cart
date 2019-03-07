@@ -55,7 +55,8 @@ I decided to build this website using **AngularJS** since it is one of my favori
 
 I also used **localStorage** for storing data added by user in the cart.
 
-I had created one [controllers](https://github.com/shruti2626/clothing-retailer-shopping-cart/tree/master/js/controllers/ShoppingCtrl.js),  for getting the **JSON data** , adding data to cart and view cart . I had also refactored my code by creating [factories](https://github.com/shruti2626/clothing-retailer-shopping-cart/js/services/ProductDetailsService.js),responsible for creating a **GET request**.
+I had created one [controllers]
+(https://github.com/shruti2626/clothing-retailer-shopping-cart/tree/master/js/controllers/ShoppingCtrl.js),  for getting the **JSON data** , adding data to cart and view cart . I had also refactored my code by creating [factories](https://github.com/shruti2626/clothing-retailer-shopping-cart/js/services/ProductDetailsService.js),responsible for creating a **GET request**.
       
 Lastly I had configured all my **routes** and **dependencies** in the [app.js](https://github.com/shruti2626/clothing-retailer-shopping-cart/tree/master/js/app.js) file.
 
@@ -68,7 +69,7 @@ To make the website **responsive** I had set used bootstrap classes and css medi
 To make website **accessible** I had set aria tags for screenreader.
 
 ### Testing
-
+As for unit testing I used Karma-Jasmine. Unfortunately I didn't have time to test all my controllers so my unit testing remains to be completed.
 
 ## Directory Structure
 
