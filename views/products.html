@@ -32,6 +32,7 @@
             <tr class="animate-repeat" ng-repeat="item in products | filter:searchText | orderBy:'category' ">
               <th scope="row" ng-bind="item.category "></th>
               <td ng-bind="item.productName"></td>
+              <span class="out-of-stock" ng-bind="outOfStockMsg" ng-show="{{item.quantityInStock}}< 1"></span> </td>
               <td ng-bind="item.price | currency:'£'"></td>
               <td ng-bind="item.quantityInStock"></td>
               <td><button class="btn add-btn" 

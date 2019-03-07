@@ -5,7 +5,6 @@ body {
 .view-container {
     position: relative;
   }
-
 /* header style */
 .header-container {
 	background-color:#1c3b5a;
@@ -94,7 +93,8 @@ table{
 }
 
 table.table tbody tr td span.out-of-stock{
- color:red;
+ color:#ff0000;
+ display: block;
 
 }
  /* empty cart message */
@@ -172,7 +172,7 @@ ul {
     transition: 0.3s;  
     padding: 10px;
     background-color: #f1f1f1;
-    margin-bottom: 10%;
+    margin: 10px 25px 10px 0;    
   }
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);

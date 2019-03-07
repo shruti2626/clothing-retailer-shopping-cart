@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "karma start karma.conf.js",
-    "start": "http-server ./ -p8001"
+    "start": "http-server ./ -p8000"
   },
   "repository": {
     "type": "git",
