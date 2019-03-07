@@ -1,15 +1,19 @@
-Clothing Retailer Shopping Cart Website 
+# Clothing Retailer Portal 
+   A portal to add and shop clothes.
 
-Task & User Stories
-My Approach
-Directory Structure
-App Usage and Features
-Download Instructions
+* [Task & User Stories](#task)
+* [My Approach](#my-approach)
+* [Directory Structure](#directory-structure)
+* [App Usage and Features](#app-usage-and-features)
+* [Download Instructions](#download-instructions)
 
-Task
-The task was to build a responsive website for a clothing retailer that displays 6 categories of clothes and that also shows a shopping cart. Discount vouchers could also be redeemed.
+## Task
 
-User Stories:
+The task was to build a **responsive website** for a **clothing retailer** that displays **6 categories** of clothes and that also shows a **shopping cart**. **Discount vouchers** could also be redeemed.
+
+#### User Stories:
+
+```
 As a User
 So that I can see what is on offer
 I want to view all products, their category, price and availability
@@ -41,78 +45,114 @@ I want to see confirmation that the voucher is invalid
 As a User
 So that I know if a product is out of stock
 I want to see a message whenever I try to add an out-of-stock product to my cart
+```
 
-My Approach
-Back-End
-I decided to build this website using AngularJS since it is my favourite framework for building responsive websites.
-AngularJS makes it really simple to set up a project and structure your code, thanks to its controllers and services. Another reason for choosing AngularJS was that the data used for this website was in small amounts therefore it wasn't necessary to use a framework like React, one that is widely used for data heavy websites.
+## My Approach
 
-I had created one controller only, for getting the JSON data from the service and managing the shopping cart. 
+### Back-End
 
-I had configured all my routes in the app.js file.
+I decided to build this website using **AngularJS** since it is one of my favorite frameworks for building responsive websites. AngularJS makes it really simple to set up a project and structure your code, thanks to its **controllers, services** and **directives**. Another reason for choosing AngularJS was that the data used for this website was in small amounts therefore it wasn't necessary to use a framework like React, one that is widely used for data heavy websites.
 
-Front-End / Styling
-Once all the logic was complete I then moved onto styling the website. I had used HTML, CSS and Bootstrap to style the website.
+I also used **localStorage** for storing data added by user in the cart.
 
-To make the website responsive I had set different css values to different media screen sizes.
+I had created one [controllers](https://github.com/shruti2626/clothing-retailer-shopping-cart/tree/master/js/controllers/ShoppingCtrl.js),  for getting the **JSON data** , adding data to cart and view cart . I had also refactored my code by creating [factories](https://github.com/shruti2626/clothing-retailer-shopping-cart/js/services/ProductDetailsService.js),responsible for creating a **GET request**.
+      
+Lastly I had configured all my **routes** and **dependencies** in the [app.js](https://github.com/shruti2626/clothing-retailer-shopping-cart/tree/master/js/app.js) file.
 
-Testing
-As for unit testing I used Karma-Jasmine. Unfortunately I didn't have time to test all my controllers and services so my unit testing remains to be completed.
+### Front-End / Styling
 
-Directory Structure
-├── app/
-│   ├── css/
-│   ├── image/   
-│   ├── views/  
-│   ├── mock/   
-│   ├── js/   
-│   │   ├── app.js
-│   │   ├── controller/
-                      |--shoppingCtrl.js
-│   │   
-│   │   └── controller/
-                      |--productDetailsService.js
-│   └── index.html
-│
+Once all the logic was complete I then moved onto styling the website. I had used **HTML, CSS** and **Bootstrap** to style the website. 
+
+To make the website **responsive** I had set used bootstrap classes and css mediaqueries to different [media screen sizes](https://github.com/shruti2626/clothing-retailer-shopping-cart/tree/master/styles/main.css).
+
+To make website **accessible** I had set aria tags for screenreader.
+
+### Testing
+
+
+## Directory Structure
+
+```
+├── image/
+    ├──background-image-fashion.jpg
+├── js/  
+│   ├── controllers/
+│   │   ├── ShoppingCtrl.js
+│   ├── services/ 
+│   │   │── ProductDetailsService.js
+│   ├── app.js   
+│── mock 
+│   ├──product.json
+├── styles/
+│   ├── main.css 
 ├── test/
-│   ├── e2e/
-│   │   └── 
-│   ├── unit/  
-│   │    └── shoppingCtrl.js
-│   ├── karma.conf.js
-│   └── protractor-conf.js
-│
+│   ├── controllers/
+│   │   ├── ShoppingCtrl_test.js
+│   ├── services/ 
+│   │   │── ProductDetailsService_test.js
+│   ├── app_test.js   
+│── mock 
+│   ├──products.html
+│   ├──cart-item.html
+├──index.html
+├──karma.conf.js
+```
 
-App Usage and Features
-User can view all 6 categories:
+## App Usage and Features
 
-GetProduct Page
+***User can view all product available with category, productname, price and quantity:***
 
-  User can view a category,product name, price, quantity and cart icon on the header of table. 
-  User can Add a product from the product table by click ADD TO CART button.
-  User cannot add a product that is out of stock.
-  User can view the total selected product and price on shopping cart icon.
-  User can view their shopping cart on clicking shopping cart icon on top and end of the table both.
 
-Shopping Cart Page
+![Product Page]
 
-  User can view category,price and quantity of slected product and also can add or remove product.
-  User cannot add more product in shopping cart if quantity is 0.
-  User can remove product from shopping cart.
-  User can go to getProduct page on clicking on continue shopping button.
-  User can clear the cart on clicking clear cart button.
-  User can apply a voucher which gives them a discount
-  Code for £5 off voucher: voucher5
-  Code for £10 off voucher when spent over £50: voucher10
-  Code for £15 off voucher when spent over £75 and ordered a foot-wear item: voucher15
-  
-Download Instructions
+***User can view can add a product from add to cart button:***
+
+![Product Page]
+
+***User cannot add a product that is out of stock:***
+
+![Product Page]
+
+***User can view their shopping cart on clicking cart icon :***
+
+![Product Page]
+
+***User can view his cart item :***
+
+![Cart Page]
+
+***User can view increase or descrease product quantity :***
+
+![Cart Page]
+
+***User can remove single product on click  x icon:***
+
+
+
+***User can continue shopping :***
+
+
+***User can  redeem voucher using code :***
+
+
+***User can clear cart also :***
+
+
+***User can view message if he adds invalid voucher code :***
+
+
+
+## Download Instructions
+
 Follow the below instructions on your terminal to use the website:
 
-$ git clone github.com/shruti2626/clothing-retailer-shopping-cart.git
-$ cd clothing-retailer-shopping-cart
+```
+$ git clone https://github.com/shruti2626/clothing-retailer-shopping-cart.git
+$ cd clothing-retailer-portal
 $ npm install
 $ npm start
 (On your browser visit: http://localhost:8000/#!/getProduct)
-Below are the codes to be entered when you wish to test using the vouchers:
-Author: Shruti Saxena
+```
+
+
+#### Author: [Shruti Saxena](https://github.com/shruti2626)
