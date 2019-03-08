@@ -8,6 +8,12 @@
     </div>
    </header>
     <!-- page title ENDS-->
+    <!-- page errors STARTS-->
+    <!-- <div class="row" ng-if="noProductsToShow">
+      <div ng-bind="noProducts">
+               </div>
+  </div> -->
+  <!-- page errors ENDS-->
     <!-- page description STARTS-->
     <div  class="main-container">
       <!-- background image here -->
@@ -35,8 +41,13 @@
               <td ng-bind="item.productName"></td>
               <td ng-bind="item.price | currency:'£'"></td>
               <td ng-bind="item.quantityInStock"></td>
-              <td><button class="btn add-btn"  ng-disabled="{{item.quantityInStock}}<1" ng-click="addItem(item.productName,item.price,1,item.category)">ADD TO CART</button>
-                <span class="out-of-stock" ng-bind="outOfStockMsg" ng-show="{{item.quantityInStock}}< 1"></span> </td>
+              <td>                
+                <button id="addItemId" class="btn add-btn" ng-disabled="item.quantityOutofStock" 
+                ng-click="addItem(item.productName,item.price,1,item.category)">ADD TO CART</button>
+                <!-- <span>{{item.quantityOutofStock}}</span>
+                <span>{{outOfStockMsg}}</span> -->
+                <span class="out-of-stock"  ng-show="item.quantityInStock<1">{{outOfStockMsg}}</span>               
+              </td>
             </tr>
             <tr>
               <td/>

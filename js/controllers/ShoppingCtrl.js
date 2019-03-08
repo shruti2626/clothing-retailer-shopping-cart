@@ -7,6 +7,7 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
         $scope.categoryFootwear = true;
         $scope.amountAfterDiscount = null;
         $scope.validVoucher = false;
+        $scope.outOfStockItem=false;
         this.cartName = "Angular Store";
         $scope.getProductList=function() {
             ProductDetailsService.getProducts().
@@ -17,6 +18,7 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
                     else{
                         $scope.noProducts="No products to show"
                     }
+                    $scope.outOfStockMsg='Out of Stock!';
                     //load the items from local storage to cartItem array 
                     //adjust the item quantity corresponding to quantity in products array
                     $scope.loadItems();
@@ -32,7 +34,7 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
                     for (var i = 0; i < items.length; i++) {
                         var item = items[i];
                         if (item.productName != null && item.price != null && item.category != null && item.quantity != null) {
-                            item = new $scope.newCartItem(item.productName, item.price, item.quantity,item.category);
+                            item = new $scope.newCartItem(item.productName, item.price, item.quantity,item.category,item.quantityInStock);
                             this.cartItem.push(item);
                         }
                     }
@@ -40,7 +42,7 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
                         var cart = $scope.cartItem[i];
                         for(var j=0;j<$scope.products.length;j++){
                             if(cart.productName == $scope.products[j].productName){
-                                $scope.products[j].quantityInStock = $scope.products[j].quantityInStock - cart.quantity;
+                                $scope.products[j].quantityInStock = $scope.products[j].quantityInStock - cart.quantity;                                
                             }
                         }
                     }
@@ -70,7 +72,7 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
         //add new item to cartItem array  
         //if item already exist in cartItem array increase the quantity count by 1
         //reduce the quantity of item from products array
-        $scope.addItem = function (productName, price, quantity, category) {
+        $scope.addItem = function (productName, price, quantity, category, quantityInStock) {
             quantity = $scope.toNumber(quantity);
             var updateAll = false;
             if (quantity != 0) {
@@ -84,32 +86,33 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
                                 found = true;
                                 item.quantity = $scope.toNumber(item.quantity + quantity);
                                 if (item.quantity <= 0) {
-                                    $scope.cartItem.splice(i, 1);
-                                    //console.log($scope.cartItem);
-                                    
-                                }
+                                    $scope.cartItem.splice(i, 1)
+                                    if(item.quantityInStock==1){
+                                        $scope.outOfStockItem=true;
+                                    };
+								}
                                 updateAll = true;
+								break
                             }
-                            if(updateAll){
-                                break;
-                            }
-                        }
+                        }                       
                         // new item, add now
                         if (!found) {
-                            var item = new $scope.newCartItem(productName, price, quantity, category);
+                            var item = new $scope.newCartItem(productName, price, quantity, category,quantityInStock);
                             $scope.cartItem.push(item);
+                            console.log(item.quantityInStock);
+                            if(quantityInStock ==1){
+                                $scope.outOfStockItem=true;
+                            };
                             updateAll = true;
                         }
-                        break;
-                    }
-                }
-            }
+                        break;                    
+					}
+				}
+			}
             if(updateAll){
-                $scope.saveItems();
-                $scope.updateProducts(productName, price, quantity);                
-            }
-            else{
-                $scope.outOfStockMsg='OUT OF STOCK !';
+                $scope.saveItems(); //save cart item in local storage.
+                $scope.updateProducts(productName, price, quantity);   
+
             }
         };
 
@@ -119,7 +122,11 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
                 var item = $scope.products[i];
                 if(item.productName == productName){
                     item.quantityInStock = item.quantityInStock - quantity;
-                }
+                    if(item.quantityInStock == 0)
+                        item.quantityOutofStock=true;
+                   // $scope.outOfStockMsg='OUT OF STOCK !';
+                   // $scope.outOfStockItem =true;
+                }                
             }
             
         };
@@ -149,11 +156,12 @@ angular.module("ecommerceApp").controller("ShoppingCtrl", ["$scope", "ProductDet
         };
 
         //create key value pair of new cart item to be added to cartItem array
-        $scope.newCartItem= function (productName, price, quantity, category) {
+        $scope.newCartItem= function (productName, price, quantity, category,quantityInStock) {
             this.productName = productName;
             this.price = price * 1;
             this.quantity = quantity * 1;
             this.category = category;
+            this.quantityInStock=quantityInStock;
         }
 
         //remove all the items from the cartItem array
