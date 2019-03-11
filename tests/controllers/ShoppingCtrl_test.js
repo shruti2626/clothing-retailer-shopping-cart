@@ -8,7 +8,7 @@ describe('eCommerce.ShoppingCtrlSpec', function (){
     $scope, 
     products,
     cartitems,
-    var controller = $controller("ShoppingCtrl", { $scope: $scope, ProductDetailService: mockDataService});
+    $controller = $controller("ShoppingCtrl", { $scope: $scope, ProductDetailService: mockDataService});
       describe("test getProductList method", function () {
         it("initiate happy flow", function () {
                 $scope.currentPage = 1;
@@ -17,3 +17,5 @@ describe('eCommerce.ShoppingCtrlSpec', function (){
                 $scope.selectAllAcctBtnChecked();
                 expect($scope.selectAllAccBtnEnabled).toEqual(true);
             });
+      });
+});
